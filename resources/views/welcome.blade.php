@@ -49,8 +49,26 @@
                     </div>
                 </div>
 
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop" alt="Doctor and Patient Consultation" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px;">
+                <div class="hero-image-container">
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop" alt="Doctor and Patient Consultation">
+                    </div>
+                    <!-- Floating Badge 1 -->
+                    <div class="floating-badge floating-badge-1">
+                        <div class="badge-icon"><i class="fas fa-award"></i></div>
+                        <div class="badge-text">
+                            <h4>#1 Clinic</h4>
+                            <p>In Vallikunnam</p>
+                        </div>
+                    </div>
+                    <!-- Floating Badge 2 -->
+                    <div class="floating-badge floating-badge-2">
+                        <div class="badge-icon"><i class="fas fa-smile"></i></div>
+                        <div class="badge-text">
+                            <h4>10k+</h4>
+                            <p>Happy Smiles</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
