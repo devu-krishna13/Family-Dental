@@ -40,7 +40,7 @@
                 </div>
 
                 <!-- Category Filters -->
-                <div class="blog-filters" style="margin-bottom: 3rem;">
+                <div class="blog-filters" style="margin-bottom: 1.5rem;">
                     @foreach($categories as $category)
                         <a href="{{ route('blog.index', ['category' => $category === 'All' ? null : $category]) }}" 
                            class="filter-pill {{ ($selectedCategory == $category || (!$selectedCategory && $category == 'All')) ? 'active' : '' }}">
@@ -52,7 +52,7 @@
         </section>
 
         <!-- Articles Grid Section -->
-        <section style="padding: 1rem 0 6rem;">
+        <section style="padding: 0 0 6rem;">
             <div class="container">
                 @if(count($articles) > 0)
                     <div class="blog-grid-clean">
