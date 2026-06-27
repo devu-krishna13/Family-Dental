@@ -7,7 +7,7 @@
     <title>Family Dental Clinic in Kanjippuzha | Aligners & Implants</title>
     <meta name="description"
         content="Family Dental Clinic in Kanjippuzha offering Invisible Aligners and Dental Implants. Book a free consultation today.">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.1">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -40,7 +40,7 @@
                     <div class="location-badge">
                         <i class="fas fa-map-marker-alt"></i> Kanjippuzha Pallimukk, Vallikunnam, Kerala
                     </div>
-                    <h1>Family Dental Clinic in Kanjippuzha | Aligners & Implants</h1>
+                    <h1>Family Dental Clinic in Kanjippuzha <br><span class="serif-italic" style="color: var(--primary);">Aligners & Implants</span></h1>
                     <p>Experience premium dental care in a comfortable environment. We specialize in giving you the
                         perfect smile with state-of-the-art aligners and permanent dental implants.</p>
 
@@ -405,24 +405,28 @@
                         healthy.</p>
                 </div>
 
-                <div class="blog-grid">
+                <div class="blog-grid-clean">
                     @foreach($latestArticles as $article)
-                        <article class="blog-card-item">
-                            <div class="blog-card-image">
-                                <img src="{{ $article['image'] }}" alt="{{ $article['title'] }}">
-                                <span class="blog-card-category">{{ $article['category'] }}</span>
-                            </div>
-                            <div class="blog-card-content">
-                                <div class="blog-card-meta">
-                                    <span><i class="far fa-calendar"></i> {{ $article['date'] }}</span>
-                                    <span><i class="far fa-clock"></i> {{ $article['read_time'] }}</span>
+                        <article class="blog-card-clean">
+                            @if($article['image'])
+                                <div class="blog-card-clean-image">
+                                    <a href="{{ route('blog.show', $article['slug']) }}">
+                                        <img src="{{ $article['image'] }}" alt="{{ $article['title'] }}">
+                                    </a>
                                 </div>
-                                <h3><a href="{{ route('blog.show', $article['slug']) }}">{{ $article['title'] }}</a></h3>
-                                <p>{{ $article['excerpt'] }}</p>
-                                <a href="{{ route('blog.show', $article['slug']) }}" class="blog-card-link">
-                                    Read Article <i class="fas fa-arrow-right"></i>
-                                </a>
+                            @endif
+                            <div class="blog-card-clean-meta">
+                                {{ \Carbon\Carbon::parse($article['created_at'])->format('F j, Y') }}
                             </div>
+                            <h3 class="blog-card-clean-title">
+                                <a href="{{ route('blog.show', $article['slug']) }}">{{ $article['title'] }}</a>
+                            </h3>
+                            <p class="blog-card-clean-excerpt">
+                                {{ $article['excerpt'] }}
+                            </p>
+                            <a href="{{ route('blog.show', $article['slug']) }}" class="blog-card-clean-link">
+                                Read more <span class="arrow-dot"><i class="fas fa-arrow-right"></i></span>
+                            </a>
                         </article>
                     @endforeach
                 </div>
