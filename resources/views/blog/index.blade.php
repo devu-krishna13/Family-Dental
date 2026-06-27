@@ -28,17 +28,19 @@
         </div>
     </header>
 
-    <main style="padding-top: 8rem;">
+    <main style="padding-top: 5rem; background-color: #FAF9F6;">
         <!-- Blog Intro Section -->
-        <section style="padding: 4rem 0 2rem;">
+        <section style="padding: 1.5rem 0 1rem;">
             <div class="container">
-                <div class="section-header" style="margin-bottom: 3rem;">
-                    <h2>Dental Health & Insights</h2>
-                    <p>Expert advice, guides, and tips from our specialist team to keep your smile healthy and radiant.</p>
+                <div class="section-header" style="text-align: center; margin-bottom: 3.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <h1 style="font-family: 'Playfair Display', Georgia, serif; font-size: 3.5rem; font-weight: 800; color: var(--text-dark); margin-bottom: 1rem; letter-spacing: -1px;">Blogs</h1>
+                    <p style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.25rem; line-height: 1.6; color: var(--text-muted); max-width: 650px; margin: 0 auto; font-style: italic; font-weight: 400;">
+                        Our personal blog focused on keeping your smile healthy and beautiful, sharing helpful guides and insights.
+                    </p>
                 </div>
 
                 <!-- Category Filters -->
-                <div class="blog-filters">
+                <div class="blog-filters" style="margin-bottom: 3rem;">
                     @foreach($categories as $category)
                         <a href="{{ route('blog.index', ['category' => $category === 'All' ? null : $category]) }}" 
                            class="filter-pill {{ ($selectedCategory == $category || (!$selectedCategory && $category == 'All')) ? 'active' : '' }}">
@@ -50,29 +52,41 @@
         </section>
 
         <!-- Articles Grid Section -->
-        <section style="padding: 2rem 0 7rem;">
+        <section style="padding: 1rem 0 6rem;">
             <div class="container">
                 @if(count($articles) > 0)
-                    <div class="blog-grid">
+                    <div class="blog-grid-clean">
                         @foreach($articles as $article)
-                            <article class="blog-card-item">
-                                <div class="blog-card-image">
-                                    <img src="{{ $article['image'] }}" alt="{{ $article['title'] }}">
-                                    <span class="blog-card-category">{{ $article['category'] }}</span>
-                                </div>
-                                <div class="blog-card-content">
-                                    <div class="blog-card-meta">
-                                        <span><i class="far fa-calendar"></i> {{ $article['date'] }}</span>
-                                        <span><i class="far fa-clock"></i> {{ $article['read_time'] }}</span>
+                            <article class="blog-card-clean">
+                                @if($article['image'])
+                                    <div class="blog-card-clean-image">
+                                        <a href="{{ route('blog.show', $article['slug']) }}">
+                                            <img src="{{ $article['image'] }}" alt="{{ $article['title'] }}">
+                                        </a>
                                     </div>
-                                    <h3><a href="{{ route('blog.show', $article['slug']) }}">{{ $article['title'] }}</a></h3>
-                                    <p>{{ $article['excerpt'] }}</p>
-                                    <a href="{{ route('blog.show', $article['slug']) }}" class="blog-card-link">
-                                        Read Article <i class="fas fa-arrow-right"></i>
-                                    </a>
+                                @endif
+                                <div class="blog-card-clean-meta">
+                                    {{ \Carbon\Carbon::parse($article['created_at'])->format('F j, Y') }}
                                 </div>
+                                <h3 class="blog-card-clean-title">
+                                    <a href="{{ route('blog.show', $article['slug']) }}">{{ $article['title'] }}</a>
+                                </h3>
+                                <p class="blog-card-clean-excerpt">
+                                    {{ $article['excerpt'] }}
+                                </p>
+                                <a href="{{ route('blog.show', $article['slug']) }}" class="blog-card-clean-link">
+                                    Read more <span class="arrow-dot"><i class="fas fa-arrow-right"></i></span>
+                                </a>
                             </article>
                         @endforeach
+                    </div>
+                    
+                    <!-- Clean Minimalist Pagination (Syed Balkhi style) -->
+                    <div class="blog-pagination-clean">
+                        <span class="current">1</span>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#" class="next-btn">Next</a>
                     </div>
                 @else
                     <div style="text-align: center; padding: 4rem 0;">
@@ -82,6 +96,15 @@
                         <a href="{{ route('blog.index') }}" class="btn btn-primary" style="margin-top: 1.5rem;">View All Articles</a>
                     </div>
                 @endif
+
+                <!-- Dark Premium CTA Banner -->
+                <div class="blog-cta-banner">
+                    <div class="blog-cta-content">
+                        <h2>Looking for a Perfect Smile?</h2>
+                        <p>Book a consultation with our experienced dental specialists and discover customized treatments for you and your family.</p>
+                        <a href="/#contact" class="blog-cta-btn">GET IN TOUCH</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

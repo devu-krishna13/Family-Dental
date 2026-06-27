@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
 
 :root {
     --primary: #0f766e; /* Professional Medical Teal */
@@ -1567,3 +1567,243 @@ footer {
         aspect-ratio: 16/9;
     }
 }
+
+/* Minimalist Blog Redesign Styles (Syed Balkhi style) */
+.blog-grid-clean {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5rem 2.5rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 968px) {
+    .blog-grid-clean {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .blog-grid-clean {
+        grid-template-columns: 1fr;
+        gap: 2.5rem 0;
+    }
+}
+
+.blog-card-clean {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    transition: var(--transition);
+}
+
+.blog-card-clean-image {
+    width: 100%;
+    aspect-ratio: 1.5;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+    border-radius: 4px;
+}
+
+.blog-card-clean-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.blog-card-clean:hover .blog-card-clean-image img {
+    transform: scale(1.03);
+}
+
+.blog-card-clean-meta {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.blog-card-clean-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--text-dark);
+    margin: 0 0 0.75rem 0;
+}
+
+.blog-card-clean-title a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.blog-card-clean-title a:hover {
+    color: var(--primary);
+}
+
+.blog-card-clean-excerpt {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-main);
+    margin: 0 0 1rem 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.blog-card-clean-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+    margin-top: auto;
+    transition: var(--transition);
+}
+
+.blog-card-clean-link .arrow-dot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #facc15;
+    color: #0f172a;
+    font-size: 0.7rem;
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.blog-card-clean-link:hover {
+    color: var(--primary);
+}
+
+.blog-card-clean-link:hover .arrow-dot {
+    transform: translateX(4px);
+    background: var(--primary);
+    color: white;
+}
+
+/* Minimalist Clean Pagination */
+.blog-pagination-clean {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 5rem;
+}
+
+.blog-pagination-clean a,
+.blog-pagination-clean span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.25rem;
+    height: 2.25rem;
+    padding: 0 0.5rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.blog-pagination-clean a:hover {
+    background: var(--bg-main);
+}
+
+.blog-pagination-clean span.current {
+    background: #0f172a;
+    color: white;
+}
+
+.blog-pagination-clean a.next-btn {
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    padding: 0 1rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+}
+
+.blog-pagination-clean a.next-btn:hover {
+    background: #0f172a;
+    color: white;
+    border-color: #0f172a;
+}
+
+/* Blog bottom CTA banner */
+.blog-cta-banner {
+    background: #0f172a;
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-cta-banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(15, 118, 110, 0.15) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.blog-cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.blog-cta-banner h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.blog-cta-banner p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin-bottom: 2rem;
+}
+
+.blog-cta-btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    background: white;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 9999px;
+    transition: var(--transition);
+}
+
+.blog-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: var(--primary);
+    color: white;
+}
+
