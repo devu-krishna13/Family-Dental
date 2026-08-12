@@ -7,6 +7,7 @@
     <meta name="description" content="Explore professional dental health articles, guides, and tips from our lead specialist at Family Dental Clinic Kanjippuzha.">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 </head>
 <body>
 

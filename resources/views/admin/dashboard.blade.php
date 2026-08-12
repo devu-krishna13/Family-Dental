@@ -128,6 +128,7 @@
             gap: 0.75rem;
         }
     </style>
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 </head>
 <body>
 

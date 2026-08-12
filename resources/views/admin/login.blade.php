@@ -72,6 +72,7 @@
             font-weight: 600;
         }
     </style>
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 </head>
 <body>
     <div class="login-wrapper">
