@@ -135,6 +135,7 @@
         </section>
 
         <!-- About Section (NEW) -->
+        <!--
         <section id="about" class="bg-alt">
             <div class="container about-inner">
                 <div class="about-image">
@@ -153,6 +154,51 @@
                         <li><i class="fas fa-check-circle"></i> Commitment to Patient Comfort</li>
                     </ul>
                     <button class="btn btn-outline">Read Full Profile</button>
+                </div>
+            </div>
+        </section>
+        -->
+
+        <!-- Dental Implants Section -->
+        <section id="implants-detail" class="bg-alt">
+            <div class="container about-inner">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop"
+                        alt="Dental Implants"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px;">
+                </div>
+                <div class="about-content">
+                    <h2>Dental Implants</h2>
+                    <p>Restore your smile with permanent, natural-looking dental implants. They function just like your real teeth and provide a lifetime solution for missing teeth.</p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check-circle"></i> Natural appearance and fit</li>
+                        <li><i class="fas fa-check-circle"></i> Long-lasting and durable</li>
+                        <li><i class="fas fa-check-circle"></i> Prevents bone loss</li>
+                        <li><i class="fas fa-check-circle"></i> High success rate</li>
+                    </ul>
+                    <button class="btn btn-primary">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Root Canal Section -->
+        <section id="root-canal-detail" style="background: white;">
+            <div class="container about-inner">
+                <div class="about-content">
+                    <h2>Root Canal Treatment</h2>
+                    <p>Save your natural tooth and eliminate pain with our advanced, virtually painless root canal procedures. We use the latest technology to ensure your comfort.</p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check-circle"></i> Relieves severe tooth pain</li>
+                        <li><i class="fas fa-check-circle"></i> Saves the natural tooth</li>
+                        <li><i class="fas fa-check-circle"></i> Prevents spread of infection</li>
+                        <li><i class="fas fa-check-circle"></i> Pain-free modern techniques</li>
+                    </ul>
+                    <button class="btn btn-primary">Learn More</button>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop"
+                        alt="Root Canal Treatment"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px;">
                 </div>
             </div>
         </section>
