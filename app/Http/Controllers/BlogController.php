@@ -49,6 +49,11 @@ class BlogController extends Controller
                     }
                     $blog['content'] = $contentHtml;
 
+                    // Extract category name if it's an array
+                    if (isset($blog['category']) && is_array($blog['category'])) {
+                        $blog['category'] = $blog['category']['name'] ?? 'Dental Care';
+                    }
+                    
                     // Fallbacks for empty fields
                     $blog['category'] = $blog['category'] ?? 'Dental Care';
                     $blog['date'] = \Carbon\Carbon::parse($blog['created_at'])->format('F j, Y');
