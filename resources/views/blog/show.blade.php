@@ -19,10 +19,11 @@
                 <i class="fas fa-bars"></i>
             </button>
             <nav>
-                <a href="/"><i class="fas fa-home"></i> Homepage</a>
-                <a href="/#aligners"><i class="fas fa-teeth"></i> Invisible Aligners</a>
-                <a href="/#implants"><i class="fas fa-tooth"></i> Dental Implants</a>
-                <a href="/#about"><i class="fas fa-user-md"></i> About</a>
+                <a href="/"><i class="fas fa-home"></i> Home</a>
+                <a href="/services"><i class="fas fa-tooth"></i> Services</a>
+                <a href="/services#aligners"><i class="fas fa-teeth"></i> Aligners</a>
+                <a href="/services#implants"><i class="fas fa-teeth-open"></i> Implants</a>
+                <a href="/services#doctor-bio"><i class="fas fa-user-md"></i> Dr. Farhana</a>
                 <a href="/blog" class="active"><i class="fas fa-newspaper"></i> Blog</a>
                 <a href="/#contact"><i class="fas fa-map-marker-alt"></i> Contact</a>
             </nav>
@@ -70,13 +71,13 @@
                 <aside class="article-sidebar">
                     <!-- CTA Widget -->
                     <div class="sidebar-cta-widget">
-                        <i class="fas fa-calendar-check cta-widget-icon"></i>
-                        <h3>Free Consultation</h3>
-                        <p>Get a personalized dental exam and customized treatment plan with our lead specialist.</p>
+                        <i class="fas fa-user-md cta-widget-icon"></i>
+                        <h3>Consult Dr. Farhana (BDS)</h3>
+                        <p>Speak directly with our lead specialist in Kanjippuzha Pallimukk. Zero-pain treatments & clear aligner scans.</p>
                         <a href="tel:+917012761098" class="btn btn-primary" style="width: 100%;">
                             <i class="fas fa-phone-alt"></i> Call +91 70127 61098
                         </a>
-                        <a href="https://wa.me/917012761098" target="_blank" class="btn btn-outline" style="width: 100%; margin-top: 0.75rem; background: white;">
+                        <a href="https://wa.me/917012761098?text={{ urlencode('Hello Dr. Farhana, I read your article on ' . $article['title'] . ' and would like to book a consultation.') }}" target="_blank" class="btn btn-outline" style="width: 100%; margin-top: 0.75rem; background: white;">
                             <i class="fab fa-whatsapp"></i> Chat on WhatsApp
                         </a>
                     </div>
@@ -117,20 +118,21 @@
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="/">Homepage</a></li>
-                        <li><a href="/#about">About Us</a></li>
-                        <li><a href="/#services">Our Services</a></li>
-                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services">Services Hub</a></li>
+                        <li><a href="/services#doctor-bio">Dr. Farhana (BDS)</a></li>
+                        <li><a href="/blog">Dental Blog</a></li>
                     </ul>
                 </div>
 
                 <!-- Services Column -->
                 <div class="footer-col">
-                    <h4>Services</h4>
+                    <h4>Treatment Pillars</h4>
                     <ul>
-                        <li><a href="/#aligners">Invisible Aligners</a></li>
-                        <li><a href="/#implants">Dental Implants</a></li>
-                        <li><a href="/#services">General Dentistry</a></li>
+                        <li><a href="/services#aligners">Invisible Aligners</a></li>
+                        <li><a href="/services#implants">Dental Implants</a></li>
+                        <li><a href="/services#root-canal">Single-Sitting RCT</a></li>
+                        <li><a href="/services#root-canal">Ultrasonic Scaling</a></li>
                     </ul>
                 </div>
 

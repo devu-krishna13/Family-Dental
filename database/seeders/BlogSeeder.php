@@ -13,35 +13,138 @@ class BlogSeeder extends Seeder
     public function run(): void
     {
         // Truncate existing blogs to prevent duplicates
-        Blog::truncate();
+        try {
+            Blog::truncate();
+        } catch (\Exception $e) {
+            // In case table does not exist yet
+        }
 
         $blogs = [
             [
-                'title' => 'Invisible Aligners Care Guide: 5 Rules for a Perfect Smile',
-                'slug' => 'how-to-care-for-invisible-aligners',
+                'title' => 'Invisible Aligners Cost in Kerala & Vallikunnam: Complete 2026 Price Guide',
+                'slug' => 'invisible-aligners-cost-kerala',
                 'category' => 'Aligners',
-                'excerpt' => 'Got your new invisible aligners? Follow these essential cleaning and maintenance rules to keep your aligners crystal clear and effective.',
+                'excerpt' => 'Discover transparent invisible aligners cost in Kerala, Vallikunnam, and Alappuzha. Compare clear aligners vs metal braces, starting prices, and 0% interest EMI options.',
                 'content' => '
-                    <p>Invisible aligners have revolutionized modern orthodontics. They offer a discreet, comfortable, and highly effective way to straighten teeth without the metal brackets and wires of traditional braces. However, to ensure your treatment runs smoothly and stays hygienic, caring for your aligners properly is vital.</p>
+                    <p>Are you looking to straighten your crooked or crowded teeth without the awkward look of metal wires? <strong>Invisible aligners</strong> (clear braces) have become the #1 choice for adults and teenagers across Kerala. If you reside in <strong>Vallikunnam, Kambisseri, Kayamkulam, or Kanjippuzha</strong>, this guide breaks down the exact cost of invisible aligners, payment plans, and treatment expectations at Family Dental Clinic.</p>
                     
-                    <h3>1. Clean Your Aligners Daily</h3>
-                    <p>Just like your teeth, aligners accumulate bacteria, plaque, and saliva throughout the day. Rinse them with lukewarm water every time you take them out. Brush them gently with a soft-bristled toothbrush and clear antibacterial soap or specialized aligner cleaners. Avoid hot water, as it can warp the plastic shape.</p>
-                    
-                    <h3>2. Always Remove Aligners to Eat and Drink</h3>
-                    <p>Except for plain water, you must remove your aligners before consuming any food or beverages. Chewing with aligners will damage the plastic, and colored drinks (like coffee, tea, or soda) will stain the aligners, making them visible and trapping sugars against your teeth.</p>
-                    
-                    <h3>3. Brush and Floss Before Reinserting</h3>
-                    <p>Trapping food particles between your teeth and your aligners is a recipe for cavities and gum irritation. Make it a habit to brush and floss your teeth after eating before popping your trays back in.</p>
-                    
-                    <h3>4. Keep Them in Their Case</h3>
-                    <p>Whenever your aligners are out of your mouth, they should be in their protective carrying case. Wrapping them in a napkin makes it too easy to accidentally throw them away or damage them.</p>
-                    
-                    <h3>5. Wear Them for at Least 22 Hours a Day</h3>
-                    <p>The success of invisible aligners relies on constant, gentle pressure. Removing them for extended periods slows down tooth movement. Aim to wear them for 20 to 22 hours daily for optimal results.</p>
+                    <h3>How Much Do Invisible Aligners Cost in Kerala?</h3>
+                    <p>In Kerala, clear aligner treatments generally range between <strong>₹45,000 and ₹1,50,000</strong> depending on case complexity, whether both upper and lower arches need correction, and the total duration. At <strong>Family Dental Clinic, Kanjippuzha Pallimukk</strong>, we believe in transparent healthcare pricing without hidden consultation fees:</p>
+                    <ul>
+                        <li><strong>Mild Spacing or Crowding (6 to 8 months):</strong> Starting from ₹45,000 – ₹60,000</li>
+                        <li><strong>Moderate Misalignment (9 to 14 months):</strong> ₹65,000 – ₹95,000</li>
+                        <li><strong>Complex Bite Correction (14 to 18 months):</strong> Custom quotation with flexible monthly installments</li>
+                    </ul>
+
+                    <h3>Flexible 0% Interest EMI Options</h3>
+                    <p>High upfront costs shouldn\'t keep you from smiling with confidence. We provide <strong>flexible monthly EMI options starting as low as ₹3,500/month</strong>. During your initial consultation, <strong>Dr. Farhana (BDS)</strong> conducts a detailed digital scan to show you a 3D preview of your future smile before you commit to any financial plan.</p>
+
+                    <h3>Clear Aligners vs. Metal Braces: Cost vs. Lifestyle Comparison</h3>
+                    <p>While traditional metal braces can cost ₹25,000 to ₹45,000, invisible aligners offer undeniable lifestyle advantages:</p>
+                    <ul>
+                        <li><strong>Virtually Invisible:</strong> Made of medical-grade transparent thermoplastic. Colleagues and friends won\'t even notice you are wearing them.</li>
+                        <li><strong>Removable for Meals & Events:</strong> Eat your favorite Kerala foods (appam, beef fry, crunchy snacks) without worrying about broken brackets.</li>
+                        <li><strong>Pain-Free & Gentle:</strong> No sharp wires poking your cheeks or causing painful mouth ulcers.</li>
+                        <li><strong>Fewer Clinic Visits:</strong> Perfect for busy professionals and students traveling from Kambisseri, Oachira, or Kayamkulam.</li>
+                    </ul>
+
+                    <div style="background: #f0fdfa; border-left: 4px solid #0f766e; padding: 1.5rem; margin: 2rem 0; border-radius: 8px;">
+                        <h4 style="color: #0f766e; margin-bottom: 0.5rem;">🌟 Book Your Zero-Obligation Digital Smile Scan</h4>
+                        <p style="margin-bottom: 1rem;">Curious whether you are an ideal candidate for clear aligners? Visit Dr. Farhana at Family Dental Clinic, Kanjippuzha Pallimukk.</p>
+                        <a href="https://wa.me/917012761098?text=Hello%20Dr.%20Farhana,%20I%20would%20like%20to%20book%20a%20Zero-Obligation%20Smile%20Scan%20for%20Invisible%20Aligners." target="_blank" style="display: inline-block; background: #0f766e; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600;">
+                            Book Smile Scan via WhatsApp (+91 70127 61098)
+                        </a>
+                    </div>
+
+                    <h3>Frequently Asked Questions on Aligners in Vallikunnam</h3>
+                    <p><strong>Q: How many hours a day should I wear clear aligners?</strong><br>
+                    For optimal results, aligners should be worn 20 to 22 hours per day, removing them only when eating, drinking hot beverages, and brushing.</p>
+                    <p><strong>Q: Is Dr. Farhana certified in clear aligner therapy?</strong><br>
+                    Yes, Dr. Farhana holds 8+ years of dedicated clinical experience and certified expertise in modern clear aligner planning and orthodontics.</p>
+                ',
+                'read_time' => '5 min read',
+                'date' => 'October 10, 2026',
+                'image' => 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=800&auto=format&fit=crop'
+            ],
+            [
+                'title' => 'Clear Aligners vs. Metal Braces for Adults in Vallikunnam & Kayamkulam',
+                'slug' => 'aligners-vs-braces-adults',
+                'category' => 'Aligners',
+                'excerpt' => 'Comparing invisible braces vs traditional metal braces for working professionals and students in Vallikunnam, Kambisseri, and Kayamkulam. Learn why clear aligners offer superior lifestyle flexibility.',
+                'content' => '
+                    <p>Many adults in <strong>Vallikunnam, Kambisseri, and Kayamkulam</strong> believe that orthodontic treatment is only meant for school children. However, more than 40% of patients seeking teeth alignment today are working professionals, college students, and brides/grooms preparing for weddings. If you want straight teeth without the "train-track" look of metal braces, clear aligners are your ideal solution.</p>
+
+                    <h3>The Dilemma of Metal Braces for Working Professionals</h3>
+                    <p>Traditional metal braces require metal brackets glued to each tooth joined with stainless steel wires. For teachers, bank executives, IT professionals, and business owners, metal braces often bring social self-consciousness during meetings, public speaking, and photos. Additionally, food particles frequently get trapped in metal brackets, requiring complex brushing routines after every snack.</p>
+
+                    <h3>Why Adults Choose Clear Aligners at Family Dental Clinic</h3>
+                    <ul>
+                        <li><strong>100% Discreet Appearance:</strong> Custom-fabricated using high-precision 3D digital impressions to snugly fit your dental arch.</li>
+                        <li><strong>Freedom to Eat What You Love:</strong> Pop the aligners out in 2 seconds before lunch or dinner. You have zero dietary restrictions.</li>
+                        <li><strong>Superior Oral Hygiene:</strong> You can brush and floss normally, avoiding plaque accumulation and white spot lesions that often plague traditional braces wearers.</li>
+                        <li><strong>Comfortable & Non-Invasive:</strong> Smooth edges ensure your inner lips and gums remain free from cuts and scrapes.</li>
+                    </ul>
+
+                    <h3>Treatment Duration: How Fast Can You See Results?</h3>
+                    <p>Most adult aligner treatments at our <strong>Kanjippuzha clinic</strong> conclude within <strong>6 to 14 months</strong>. Noticeable tooth movement begins within the first 6 to 8 weeks. Each set of custom trays is worn for 7 to 10 days before advancing to the next progressive tray.</p>
+
+                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+                        <h4 style="color: #0f172a; margin-bottom: 0.5rem;">👨‍⚕️ Consult Dr. Farhana (BDS) - Lead Dental Specialist</h4>
+                        <p style="color: #64748b; margin-bottom: 1rem;">Benefit from gentle, patient-first orthodontic care right in Kanjippuzha Pallimukk, Changankulangara - Kambisseri Road.</p>
+                        <a href="tel:+917012761098" style="display: inline-block; background: #0f766e; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; margin-right: 0.5rem;">
+                            Call for Consultation (+91 70127 61098)
+                        </a>
+                        <a href="https://wa.me/917012761098?text=Hello%20Dr.%20Farhana,%20I%20would%20like%20to%20consult%20regarding%20Clear%20Aligners%20for%20Adults." target="_blank" style="display: inline-block; background: #25d366; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600;">
+                            WhatsApp Us
+                        </a>
+                    </div>
                 ',
                 'read_time' => '4 min read',
-                'date' => 'June 20, 2026',
-                'image' => 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=600&auto=format&fit=crop'
+                'date' => 'October 12, 2026',
+                'image' => 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop'
+            ],
+            [
+                'title' => 'Single-Sitting Root Canal vs. Tooth Extraction: Emergency Pain Relief in Vallikunnam',
+                'slug' => 'single-sitting-root-canal-vallikunnam',
+                'category' => 'General Care',
+                'excerpt' => 'Suffering from emergency toothache? Learn why a pain-free single sitting root canal (RCT) with rotary endodontics is far better than tooth extraction at Family Dental Clinic, Kanjippuzha.',
+                'content' => '
+                    <p>A severe, throbbing toothache that keeps you awake at night is one of the most agonizing pains anyone can experience. When dental pain strikes, many patients in <strong>Vallikunnam, Kanjippuzha, and Kambisseri</strong> ask: <em>"Doctor, should I just extract the tooth to get rid of the pain immediately?"</em></p>
+                    <p>The clear clinical answer from <strong>Dr. Farhana (BDS)</strong> is: <strong>Always preserve your natural tooth whenever possible.</strong> A modern <strong>Single-Sitting Root Canal Treatment (RCT)</strong> eliminates pain instantly while saving your real tooth for decades to come.</p>
+
+                    <h3>Why Pulling Your Tooth Out (Extraction) Costs More in the Long Run</h3>
+                    <p>Extracting a damaged tooth might seem like a quick fix, but losing a natural tooth triggers serious oral health consequences:</p>
+                    <ul>
+                        <li><strong>Adjacent Teeth Shift:</strong> Neighboring teeth gradually tilt into the empty space, altering your natural bite and causing jaw joint (TMJ) discomfort.</li>
+                        <li><strong>Jawbone Deterioration:</strong> Without a tooth root to stimulate the bone, the jawbone in that area recedes, aging your facial structure prematurely.</li>
+                        <li><strong>Higher Replacement Cost:</strong> Replacing an extracted tooth with a dental implant or bridge costs significantly more than saving it with a root canal.</li>
+                    </ul>
+
+                    <h3>The Modern Difference: Painless Single-Sitting Rotary RCT</h3>
+                    <p>Gone are the days when a root canal required 3 or 4 painful visits with manual metal needles. At <strong>Family Dental Clinic</strong>, we utilize <strong>advanced electric rotary endodontics</strong>:</p>
+                    <ul>
+                        <li><strong>Completed in One Visit (45–60 mins):</strong> The infected pulp is carefully cleaned, disinfected, and hermetically sealed in a single comfortable session.</li>
+                        <li><strong>100% Pain-Free Local Anesthesia:</strong> Advanced numbing techniques ensure you feel absolutely zero pain during the procedure.</li>
+                        <li><strong>Immediate Relief:</strong> As soon as the inflamed nerve tissue is removed, the throbbing pain disappears completely.</li>
+                    </ul>
+
+                    <h3>Root Canal Cost & Long-Lasting Ceramic Crowns</h3>
+                    <p>Following single-sitting root canal therapy, we protect your tooth with a precision-milled crown (Zirconia or Porcelain-Fused-to-Metal) ensuring it can withstand heavy chewing just like an untouched tooth. Pricing in our Kanjippuzha clinic is transparent and pocket-friendly, with complete treatment estimates provided up-front.</p>
+
+                    <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 1.5rem; margin: 2rem 0; border-radius: 8px;">
+                        <h4 style="color: #b91c1c; margin-bottom: 0.5rem;">🚨 Suffering from Severe Toothache Right Now?</h4>
+                        <p style="color: #7f1d1d; margin-bottom: 1rem;">Do not wait for infection to spread. Our emergency dental team in Kanjippuzha Pallimukk provides fast relief and priority appointments.</p>
+                        <a href="tel:+917012761098" style="display: inline-block; background: #dc2626; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 700;">
+                            Emergency Call: +91 70127 61098
+                        </a>
+                        <a href="https://wa.me/917012761098?text=EMERGENCY:%20I%20have%20severe%20toothache%20and%20need%20immediate%20assistance%20at%20Family%20Dental%20Clinic." target="_blank" style="display: inline-block; background: #25d366; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; margin-left: 0.5rem;">
+                            WhatsApp Emergency
+                        </a>
+                    </div>
+                ',
+                'read_time' => '5 min read',
+                'date' => 'October 14, 2026',
+                'image' => 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop'
             ],
             [
                 'title' => 'Dental Implants vs. Dentures: Why Implants Are the Gold Standard',
@@ -64,57 +167,8 @@ class BlogSeeder extends Seeder
                     <p>Traditional dental bridges require grinding down neighboring teeth to support the bridge. Implants are standalone structures, meaning they support themselves without compromising the health of adjacent healthy teeth.</p>
                 ',
                 'read_time' => '5 min read',
-                'date' => 'June 18, 2026',
+                'date' => 'October 08, 2026',
                 'image' => 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=600&auto=format&fit=crop'
-            ],
-            [
-                'title' => 'Preventative Care: Simple Daily Habits for Healthy Family Smiles',
-                'slug' => 'top-tips-for-family-dental-hygiene',
-                'category' => 'Hygiene',
-                'excerpt' => 'Dental care starts at home. Teach your family these simple preventative habits to keep plaque away and prevent expensive dental treatments.',
-                'content' => '
-                    <p>Preventative dentistry is the key to maintaining a healthy smile for life. By practicing simple, consistent hygiene habits at home, your family can prevent tooth decay, gum disease, and save on expensive dental procedures down the road.</p>
-                    
-                    <h3>1. The 2-Minute Rule</h3>
-                    <p>Make sure everyone in the family brushes their teeth at least twice a day for a full two minutes. Use a soft-bristled toothbrush and fluoride toothpaste to protect enamel. Consider using a timer or a fun song to keep kids motivated.</p>
-                    
-                    <h3>2. Do Not Skip Flossing</h3>
-                    <p>Brushing cleans only about 60% of the tooth surface. The remaining 40% lies between the teeth, where brush bristles cannot reach. Flossing daily is essential to remove trapped food debris and plaque before it hardens into tartar.</p>
-                    
-                    <h3>3. Limit Sugary and Acidic Foods</h3>
-                    <p>Sugars feed the harmful bacteria in your mouth, which produce acids that attack tooth enamel. Limit sugary snacks, juices, and carbonated sodas. Encourage drinking plenty of water, which helps rinse away bacteria and debris.</p>
-                    
-                    <h3>4. Schedule Bi-Annual Cleanings</h3>
-                    <p>Even the most thorough home care routine cannot remove hardened tartar. Professional cleanings every six months at our clinic are crucial. These visits also allow our lead specialist to catch any potential issues early.</p>
-                ',
-                'read_time' => '3 min read',
-                'date' => 'June 12, 2026',
-                'image' => 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=600&auto=format&fit=crop'
-            ],
-            [
-                'title' => 'Demystifying the Root Canal: Pain-Free Modern Techniques Explained',
-                'slug' => 'understanding-root-canal-treatment',
-                'category' => 'General Care',
-                'excerpt' => 'Fear of root canals is a thing of the past. Learn how modern anesthesia and advanced equipment make root canals as pain-free as a standard filling.',
-                'content' => '
-                    <p>The phrase "root canal" has long carried an unfair reputation for causing severe discomfort. However, thanks to state-of-the-art dental technology and advanced local anesthetics, modern root canal therapy is no more painful than receiving a simple filling.</p>
-                    
-                    <h3>What is a Root Canal?</h3>
-                    <p>A root canal is a restorative procedure used to save a tooth that is severely decayed, infected, or damaged. Inside each tooth is pulp containing nerves and blood vessels. If bacteria enter this pulp due to deep cavities or a cracked tooth, it causes infection and throbbing pain. The treatment removes the infected pulp, cleans the internal canal, and seals it.</p>
-                    
-                    <h3>Why Modern Root Canals Are Comfortable</h3>
-                    <ul>
-                        <li><strong>Advanced Anesthesia</strong>: We use premium local anesthetics to completely numb the area, ensuring you do not feel pain during the treatment.</li>
-                        <li><strong>Rotary Endodontics</strong>: Modern electric rotary tools allow us to clean out canals faster, quieter, and with far greater precision than manual files.</li>
-                        <li><strong>Laser Cleaning</strong>: Laser sterilisation kills bacteria deep inside the canals, increasing the success rate and speeding up recovery.</li>
-                    </ul>
-                    
-                    <h3>Post-Treatment Care</h3>
-                    <p>Most patients feel immediate relief from their toothache after a root canal. Mild soreness for a few days can easily be managed with over-the-counter pain relievers. We typically place a permanent crown on the tooth afterward to restore its full structural strength.</p>
-                ',
-                'read_time' => '4 min read',
-                'date' => 'June 05, 2026',
-                'image' => 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=600&auto=format&fit=crop'
             ]
         ];
 

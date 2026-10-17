@@ -7,6 +7,12 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://familydentalcare.in/services</loc>
+        <lastmod>{{ now()->tz('UTC')->toAtomString() }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
         <loc>https://familydentalcare.in/blog</loc>
         <lastmod>{{ now()->tz('UTC')->toAtomString() }}</lastmod>
         <changefreq>daily</changefreq>
@@ -17,7 +23,7 @@
             <loc>https://familydentalcare.in/blog/{{ $article['slug'] }}</loc>
             <lastmod>{{ \Carbon\Carbon::parse($article['updated_at'])->tz('UTC')->toAtomString() }}</lastmod>
             <changefreq>weekly</changefreq>
-            <priority>0.6</priority>
+            <priority>0.7</priority>
         </url>
     @endforeach
 </urlset>

@@ -3,9 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dental Health Blog | Family Dental Clinic Kanjippuzha</title>
-    <meta name="description" content="Explore professional dental health articles, guides, and tips from our lead specialist at Family Dental Clinic Kanjippuzha.">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.1">
+    <title>Dental Health & Treatment Guides | Family Dental Clinic Kanjippuzha, Vallikunnam</title>
+    <meta name="description" content="Read expert dental guides on Invisible Aligners cost, single-sitting root canal, and dental implants in Vallikunnam, Kambisseri, and Kayamkulam by Dr. Farhana (BDS).">
+    <meta name="keywords" content="dental clinic in Vallikunnam, clear aligners price Vallikunnam, root canal treatment cost Vallikunnam, braces cost Alappuzha, Dr Farhana dentist Vallikunnam">
+    <link rel="canonical" href="https://familydentalcare.in/blog">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 </head>
@@ -19,10 +21,11 @@
                 <i class="fas fa-bars"></i>
             </button>
             <nav>
-                <a href="/"><i class="fas fa-home"></i> Homepage</a>
-                <a href="/#aligners"><i class="fas fa-teeth"></i> Invisible Aligners</a>
-                <a href="/#implants"><i class="fas fa-tooth"></i> Dental Implants</a>
-                <a href="/#about"><i class="fas fa-user-md"></i> About</a>
+                <a href="/"><i class="fas fa-home"></i> Home</a>
+                <a href="/services"><i class="fas fa-tooth"></i> Services</a>
+                <a href="/services#aligners"><i class="fas fa-teeth"></i> Aligners</a>
+                <a href="/services#implants"><i class="fas fa-teeth-open"></i> Implants</a>
+                <a href="/services#doctor-bio"><i class="fas fa-user-md"></i> Dr. Farhana</a>
                 <a href="/blog" class="active"><i class="fas fa-newspaper"></i> Blog</a>
                 <a href="/#contact"><i class="fas fa-map-marker-alt"></i> Contact</a>
             </nav>
@@ -124,20 +127,21 @@
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="/">Homepage</a></li>
-                        <li><a href="/#about">About Us</a></li>
-                        <li><a href="/#services">Our Services</a></li>
-                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services">Services Hub</a></li>
+                        <li><a href="/services#doctor-bio">Dr. Farhana (BDS)</a></li>
+                        <li><a href="/blog">Dental Blog</a></li>
                     </ul>
                 </div>
 
                 <!-- Services Column -->
                 <div class="footer-col">
-                    <h4>Services</h4>
+                    <h4>Treatment Pillars</h4>
                     <ul>
-                        <li><a href="/#aligners">Invisible Aligners</a></li>
-                        <li><a href="/#implants">Dental Implants</a></li>
-                        <li><a href="/#services">General Dentistry</a></li>
+                        <li><a href="/services#aligners">Invisible Aligners</a></li>
+                        <li><a href="/services#implants">Dental Implants</a></li>
+                        <li><a href="/services#root-canal">Single-Sitting RCT</a></li>
+                        <li><a href="/services#root-canal">Ultrasonic Scaling</a></li>
                     </ul>
                 </div>
 

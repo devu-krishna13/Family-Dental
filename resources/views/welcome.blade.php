@@ -4,13 +4,80 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Family Dental Clinic in Kanjippuzha | Aligners & Implants</title>
+    <title>Dental Clinic in Vallikunnam | Family Dental Clinic Kanjippuzha | Aligners & Implants</title>
     <meta name="description"
-        content="Family Dental Clinic in Kanjippuzha offering Invisible Aligners and Dental Implants. Book a free consultation today.">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.1">
+        content="Best dental clinic in Vallikunnam, Kanjippuzha & Kambisseri. Led by Dr. Farhana (BDS). Specialized in Invisible Aligners, Dental Implants, and Single-Sitting Root Canal. Call +91 70127 61098.">
+    <meta name="keywords"
+        content="dental clinic in Vallikunnam, dentist near me Kanjippuzha, best dental clinic Kambisseri, family dentist Kayamkulam, invisible aligners in Vallikunnam, dental implants in Vallikunnam, root canal treatment in Vallikunnam, Dr Farhana dentist Vallikunnam, female dentist in Vallikunnam">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://familydentalcare.in/">
+
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.2">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
+
+    <!-- Schema.org LocalBusiness / Dentist JSON-LD Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Family Dental Clinic",
+      "image": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop",
+      "@id": "https://familydentalcare.in/#clinic",
+      "url": "https://familydentalcare.in",
+      "telephone": "+917012761098",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kanjippuzha Pallimukk, Changankulangara - Kambisseri Rd",
+        "addressLocality": "Vallikunnam",
+        "addressRegion": "Kerala",
+        "postalCode": "690501",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 9.1210367,
+        "longitude": 76.5629388
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "18:30"
+        }
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Dr. Farhana",
+        "jobTitle": "Lead Dental Specialist & Aesthetic Consultant",
+        "hasCredential": "BDS (Bachelor of Dental Surgery)"
+      },
+      "areaServed": [
+        "Vallikunnam",
+        "Kanjippuzha",
+        "Kambisseri",
+        "Kayamkulam",
+        "Changankulangara",
+        "Alappuzha"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "33"
+      }
+    }
+    </script>
 </head>
 
 <body>
@@ -23,11 +90,12 @@
                 <i class="fas fa-bars"></i>
             </button>
             <nav>
-                <a href="/"><i class="fas fa-home"></i> Homepage</a>
-                <a href="#aligners"><i class="fas fa-teeth"></i> Invisible Aligners</a>
-                <a href="#implants"><i class="fas fa-tooth"></i> Dental Implants</a>
-                <a href="#about"><i class="fas fa-user-md"></i> About</a>
-                <!-- <a href="/blog"><i class="fas fa-newspaper"></i> Blog</a> -->
+                <a href="/"><i class="fas fa-home"></i> Home</a>
+                <a href="/services"><i class="fas fa-tooth"></i> Services</a>
+                <a href="#about"><i class="fas fa-user-md"></i> Dr. Farhana</a>
+                <a href="/services#aligners"><i class="fas fa-teeth"></i> Aligners</a>
+                <a href="/services#implants"><i class="fas fa-teeth-open"></i> Implants</a>
+                <a href="/blog"><i class="fas fa-newspaper"></i> Blog</a>
                 <a href="#contact"><i class="fas fa-map-marker-alt"></i> Contact</a>
             </nav>
         </div>
@@ -41,15 +109,14 @@
                     <div class="location-badge">
                         <i class="fas fa-map-marker-alt"></i> Kanjippuzha Pallimukk, Vallikunnam, Kerala
                     </div>
-                    <h1>Family Dental Clinic in Kanjippuzha <br><span class="serif-italic" style="color: var(--primary);">Aligners & Implants</span></h1>
-                    <p>Experience premium dental care in a comfortable environment. We specialize in giving you the
-                        perfect smile with state-of-the-art aligners and permanent dental implants.</p>
+                    <h1>Top Dental Clinic in Vallikunnam & Kanjippuzha <br><span class="serif-italic" style="color: var(--primary);">Dr. Farhana (BDS)</span></h1>
+                    <p>Experience gentle, modern dental care near Kambisseri and Kayamkulam. We specialize in pain-free invisible aligners, permanent dental implants, and single-sitting root canals.</p>
 
                     <div class="hero-actions">
                         <a href="tel:+917012761098" class="btn btn-primary">
                             <i class="fas fa-calendar-alt"></i> Book Free Consultation
                         </a>
-                        <a href="https://wa.me/917012761098" target="_blank" class="btn btn-outline">
+                        <a href="https://wa.me/917012761098?text=Hello%20Dr.%20Farhana,%20I%20would%20like%20to%20book%20a%20consultation%20at%20Family%20Dental%20Clinic." target="_blank" class="btn btn-outline">
                             <i class="fab fa-whatsapp"></i> WhatsApp Us
                         </a>
                     </div>
@@ -101,63 +168,112 @@
             <div class="scroll-indicator"><i class="fas fa-chevron-down"></i></div>
         </section>
 
+        <!-- Bilingual Malayalam Key Info Snippet -->
+        <div class="container">
+            <div class="malayalam-snippet-card">
+                <div class="malayalam-snippet-content">
+                    <span class="malayalam-snippet-badge">
+                        <i class="fas fa-language"></i> പ്രാദേശിക സേവനം • മലയാളം
+                    </span>
+                    <h3 class="malayalam-snippet-title">ഫാമിലി ഡെന്റൽ ക്ലിനിക്ക്, കാഞ്ഞിപ്പുഴ പള്ളിമുക്ക്</h3>
+                    <p class="malayalam-snippet-text">
+                        വള്ളിക്കുന്നം, കമ്പിശ്ശേരി, കായംകുളം ഭാഗത്തുള്ളവർക്ക് മികച്ച ഡെന്റൽ ചികിത്സ. അടിയന്തിര പല്ലുവേദനയ്ക്കും ഇംപ്ലാന്റ്, കമ്പിയിടാത്ത ഇൻവിസിബിൾ അലൈനർ ചികിത്സകൾക്കും ഡോ. ഫർഹാനയുടെ നേരിട്ടുള്ള പരിശോധന.
+                    </p>
+                    <div class="malayalam-snippet-timing">
+                        <span><i class="far fa-clock"></i> തിങ്കൾ - ശനി: 9:00 AM - 6:30 PM</span>
+                        <span><i class="fas fa-phone-alt"></i> അടിയന്തിര സഹായം: +91 70127 61098</span>
+                    </div>
+                </div>
+                <div class="malayalam-snippet-actions">
+                    <a href="https://wa.me/917012761098?text=ഹലോ%20ഡോക്ടർ,%20എനിക്ക്%20ചികിത്സയെക്കുറിച്ച്%20കൂടുതൽ%20അറിയണം." target="_blank" class="btn-malayalam-whatsapp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp ബുക്കിംഗ്
+                    </a>
+                    <a href="/services" class="btn-malayalam-call">
+                        <i class="fas fa-tooth"></i> എല്ലാ സേവനങ്ങളും
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <!-- Key Services Section -->
         <section id="services" class="services">
             <div class="container">
                 <div class="section-header">
-                    <h2>Key Services</h2>
-                    <p>Comprehensive dental care tailored for your family.</p>
+                    <h2>Key Treatment Pillars</h2>
+                    <p>Comprehensive, pain-free dental care tailored for your entire family in Vallikunnam.</p>
                 </div>
 
                 <div class="services-grid">
                     <div class="service-card" id="aligners">
                         <div class="service-icon"><i class="fas fa-teeth"></i></div>
                         <h3>Invisible Aligners</h3>
-                        <p>Straighten your teeth discreetly with our custom-fit, comfortable invisible aligners. Perfect
-                            for adults and teens seeking a perfect smile without braces.</p>
+                        <p>Straighten your teeth discreetly with custom-fit invisible aligners. 6 to 18 months duration with 0% EMI options starting at ₹3,500/mo.</p>
+                        <a href="/services#aligners" style="display: inline-block; margin-top: 1rem; color: var(--primary); font-weight: 700; text-decoration: none;">
+                            Learn More & Pricing <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
 
                     <div class="service-card" id="implants">
                         <div class="service-icon"><i class="fas fa-tooth"></i></div>
                         <h3>Dental Implants</h3>
-                        <p>Restore your smile with permanent, natural-looking dental implants that function just like
-                            your real teeth. A lifetime solution for missing teeth.</p>
+                        <p>Restore missing teeth with permanent, biocompatible titanium implants. Prevents jawbone loss and functions just like your real teeth.</p>
+                        <a href="/services#implants" style="display: inline-block; margin-top: 1rem; color: var(--primary); font-weight: 700; text-decoration: none;">
+                            Learn More & Pricing <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
 
                     <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-smile"></i></div>
-                        <h3>General Dentistry</h3>
-                        <p>From routine checkups and scaling to root canals and extractions, we ensure your overall oral
-                            health is maintained at the highest standard.</p>
+                        <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+                        <h3>Single-Sitting Root Canal</h3>
+                        <p>Immediate toothache relief with modern electric rotary endodontics. 100% painless single-visit procedure to save your natural tooth.</p>
+                        <a href="/services#root-canal" style="display: inline-block; margin-top: 1rem; color: var(--primary); font-weight: 700; text-decoration: none;">
+                            Learn More & Emergency <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 2.5rem;">
+                    <a href="/services" class="btn btn-primary">
+                        <i class="fas fa-list"></i> View All Services & Pricing Plans
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- About Section (NEW) -->
-        <!--
-        <section id="about" class="bg-alt">
+        <!-- Doctor E-E-A-T Bio Section (Dr. Farhana) -->
+        <section id="about" class="bg-alt" style="padding: 5rem 0;">
             <div class="container about-inner">
                 <div class="about-image">
                     <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop"
-                        alt="Specialist Doctor Portrait"
-                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px;">
+                        alt="Dr Farhana BDS - Dentist in Vallikunnam"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px; box-shadow: var(--shadow-lg);">
                 </div>
                 <div class="about-content">
-                    <h2>Meet Your Specialist</h2>
-                    <p>With over 8 years of dedicated experience in modern dentistry, our lead specialist ensures that
-                        every patient receives personalized, pain-free treatments.</p>
-                    <ul class="about-list">
-                        <li><i class="fas fa-check-circle"></i> Certified BDS Professional</li>
-                        <li><i class="fas fa-check-circle"></i> Specialized in Invisible Aligners</li>
-                        <li><i class="fas fa-check-circle"></i> Expert in Advanced Implantology</li>
-                        <li><i class="fas fa-check-circle"></i> Commitment to Patient Comfort</li>
+                    <span style="color: var(--primary); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">
+                        Lead Dental Surgeon & Aesthetic Specialist
+                    </span>
+                    <h2 style="font-size: 2.5rem; margin-top: 0.35rem; margin-bottom: 0.75rem;">Meet Dr. Farhana, <span class="serif-italic" style="color: var(--primary);">BDS</span></h2>
+                    <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-main); margin-bottom: 1.25rem;">
+                        With over <strong>8+ years of dedicated clinical experience</strong>, Dr. Farhana leads Family Dental Clinic in Kanjippuzha Pallimukk. Registered with the <strong>Kerala Dental Council</strong>, she brings gentle, pain-free dental care to patients across Vallikunnam, Kambisseri, and Kayamkulam with transparent pricing and empathetic care.
+                    </p>
+                    <ul class="about-list" style="margin-bottom: 1.75rem;">
+                        <li><i class="fas fa-check-circle"></i> Certified BDS Professional (Kerala Dental Council Reg.)</li>
+                        <li><i class="fas fa-check-circle"></i> 8+ Years Clinical Practice in Advanced Dentistry</li>
+                        <li><i class="fas fa-check-circle"></i> Certified Provider for Invisible Aligners & Smile Design</li>
+                        <li><i class="fas fa-check-circle"></i> Expert in Single-Sitting Rotary Endodontics</li>
+                        <li><i class="fas fa-check-circle"></i> Patient-First, Pain-Free Treatment Ethics</li>
                     </ul>
-                    <button class="btn btn-outline">Read Full Profile</button>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                        <a href="/services#doctor-bio" class="btn btn-primary">
+                            <i class="fas fa-user-md"></i> Read Full E-E-A-T Profile
+                        </a>
+                        <a href="https://wa.me/917012761098?text=Hello%20Dr.%20Farhana,%20I%20would%20like%20to%20consult%20with%20you%20at%20Family%20Dental%20Clinic." target="_blank" class="btn btn-outline">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
-        -->
 
         <!-- Dental Implants Section -->
         <section id="implants-detail" class="bg-alt">
@@ -547,18 +663,46 @@
             </div>
         </section>
 
-        <!-- Final CTA (NEW) -->
+        <!-- Final CTA & Community Camp Offer -->
         <section class="cta-section">
             <div class="container cta-inner">
-                <h2>Ready to achieve your perfect smile?</h2>
-                <p>Book your free consultation today. Let our experts examine your dental health and provide a
-                    customized treatment plan.</p>
+                <h2>Ready to achieve your perfect smile in Vallikunnam?</h2>
+                <p>Book your free consultation with Dr. Farhana (BDS) today. Transparent treatment pricing, zero-pain methods, and personalized smile planning in Kanjippuzha Pallimukk.</p>
                 <div class="hero-actions" style="justify-content: center;">
                     <a href="tel:+917012761098" class="btn btn-primary">
                         <i class="fas fa-calendar-alt"></i> Book Free Consultation
                     </a>
-                    <a href="https://wa.me/917012761098" target="_blank" class="btn btn-outline">
+                    <a href="https://wa.me/917012761098?text=Hello%20Dr.%20Farhana,%20I%20would%20like%20to%20book%20a%20consultation%20at%20Family%20Dental%20Clinic." target="_blank" class="btn btn-outline">
                         <i class="fab fa-whatsapp"></i> WhatsApp Us
+                    </a>
+                </div>
+
+                <!-- Camp Offer Card -->
+                <div class="camp-offer-banner" style="margin-top: 3rem; text-align: left;">
+                    <div>
+                        <span class="camp-offer-tag">COMMUNITY OUTREACH</span>
+                        <h4 style="color: #92400e; margin: 0.5rem 0 0.25rem;">Free Oral Screening & 15% Scaling Discount</h4>
+                        <p style="color: #78350f; font-size: 0.95rem; margin-bottom: 0;">Use Coupon Code: <strong>FD-CAMP15</strong> for your complimentary oral checkup and 15% discount on ultrasonic scaling.</p>
+                    </div>
+                    <a href="https://wa.me/917012761098?text=Hello%20Dr.%20Farhana,%20I%20would%20like%20to%20redeem%20the%20FD-CAMP15%20card." target="_blank" class="btn btn-primary" style="font-size: 0.9rem;">
+                        Redeem via WhatsApp
+                    </a>
+                </div>
+
+                <!-- Google Review Standee Card -->
+                <div class="review-engine-banner" style="margin-top: 2rem; text-align: left;">
+                    <div class="review-engine-info">
+                        <div class="review-engine-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span style="color: #0f172a; font-weight: 700; margin-left: 0.5rem;">4.9 Rating • 33 Reviews</span>
+                        </div>
+                        <h3>Help our local clinic grow in Vallikunnam</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">
+                            Have you visited Dr. Farhana recently? Take 30 seconds to support Family Dental Clinic with a Google Review. It helps local families find gentle, trustworthy dental care.
+                        </p>
+                    </div>
+                    <a href="https://maps.google.com/?cid=1155437812921048890" target="_blank" class="btn-google-review">
+                        <i class="fab fa-google"></i> Leave a Google Review
                     </a>
                 </div>
             </div>
@@ -568,8 +712,8 @@
         <section class="map-section bg-alt" id="location">
             <div class="container">
                 <div class="map-header">
-                    <h2>Visit Our Clinic</h2>
-                    <p>Conveniently located in Kanjippuzha to serve you better</p>
+                    <h2>Visit Our Clinic in Kanjippuzha Pallimukk</h2>
+                    <p>Conveniently located on Changankulangara - Kambisseri Road, Vallikunnam, Kerala 690501</p>
                 </div>
                 <div class="map-container">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.3697445803323!2d76.56293889999999!3d9.121036700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b061b264a857cef%3A0x1008df66628f1f3a!2sFamily%20Dental%20Care%2C%20Kanjippuzha!5e0!3m2!1sen!2sin!4v1786685539718!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
@@ -585,28 +729,28 @@
                 <!-- Brand Column -->
                 <div class="footer-brand">
                     <a href="/" class="footer-logo">FamilyDental.</a>
-                    <p>Experience premium dental care in a comfortable environment. Your smile is our top priority.</p>
+                    <p>Kanjippuzha, Vallikunnam's premier clinic for Invisible Aligners, Dental Implants, and Gentle Family Dentistry. Led by Dr. Farhana (BDS).</p>
                 </div>
 
                 <!-- Quick Links Column -->
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="/">Homepage</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Our Services</a></li>
-                        <li><a href="#testimonials">Reviews</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services">Services Hub</a></li>
+                        <li><a href="/services#doctor-bio">Dr. Farhana (BDS)</a></li>
+                        <li><a href="/blog">Dental Blog</a></li>
                     </ul>
                 </div>
 
                 <!-- Services Column -->
                 <div class="footer-col">
-                    <h4>Services</h4>
+                    <h4>Treatment Pillars</h4>
                     <ul>
-                        <li><a href="#aligners">Invisible Aligners</a></li>
-                        <li><a href="#implants">Dental Implants</a></li>
-                        <li><a href="#services">General Dentistry</a></li>
-                        <li><a href="#services">Teeth Whitening</a></li>
+                        <li><a href="/services#aligners">Invisible Aligners</a></li>
+                        <li><a href="/services#implants">Dental Implants</a></li>
+                        <li><a href="/services#root-canal">Single-Sitting RCT</a></li>
+                        <li><a href="/services#root-canal">Ultrasonic Scaling</a></li>
                     </ul>
                 </div>
 
