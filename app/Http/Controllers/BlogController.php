@@ -248,7 +248,13 @@ class BlogController extends Controller
                                     $contentHtml .= '<div class="blog-section-image" style="margin: 2rem 0; text-align: center;"><img src="' . htmlspecialchars($imgUrl) . '" style="max-width: 100%; border-radius: 8px;"></div>';
                                 }
                                 if (!empty($section['text_content'])) {
-                                    $contentHtml .= '<p style="margin-bottom: 1.5rem; line-height: 1.8;">' . nl2br(htmlspecialchars($section['text_content'])) . '</p>';
+                                    $rawText = $section['text_content'];
+                                    // Check if text already contains HTML markup (e.g., <p>, <span>, <strong>, <div>)
+                                    if ($rawText !== strip_tags($rawText)) {
+                                        $contentHtml .= '<div style="margin-bottom: 1.5rem; line-height: 1.8;">' . $rawText . '</div>';
+                                    } else {
+                                        $contentHtml .= '<p style="margin-bottom: 1.5rem; line-height: 1.8;">' . nl2br(htmlspecialchars($rawText)) . '</p>';
+                                    }
                                 }
                             }
                         }
