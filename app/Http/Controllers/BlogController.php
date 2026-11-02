@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 use Illuminate\Pagination\LengthAwarePaginator;
 use App\Models\Blog;
@@ -176,7 +177,7 @@ class BlogController extends Controller
                 'date' => 'October 08, 2026',
                 'created_at' => '2026-10-08 10:00:00',
                 'updated_at' => '2026-10-08 10:00:00',
-                'image' => 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=600&auto=format&fit=crop'
+                'image' => asset('images/treatments/implants-vs-dentures.png')
             ]
         ];
     }
@@ -230,15 +231,26 @@ class BlogController extends Controller
 
         // 3. Try to fetch additional external blogs if API is responsive
         try {
-            $response = Http::withHeaders([
-                'Accept' => 'application/json',
-                'X-API-KEY' => 'pk_JROGfCHoFRcJFlGZ68Ff7BPSxdVSyqvJ'
-            ])->timeout(3)->get('https://blogs.task19.com/api/v1/projects/blogs');
+            $apiBlogs = Cache::get('blogs.external.fresh');
+            if ($apiBlogs === null) {
+                try {
+                    $response = Http::withHeaders([
+                        'Accept' => 'application/json',
+                        'X-API-KEY' => 'pk_JROGfCHoFRcJFlGZ68Ff7BPSxdVSyqvJ',
+                    ])->timeout(3)->get('https://blogs.task19.com/api/v1/projects/blogs');
+                    $response->throw();
+                    $apiBlogs = $response->json('blogs');
+                    if (!is_array($apiBlogs)) {
+                        throw new \UnexpectedValueException('Invalid external blog response');
+                    }
+                    Cache::put('blogs.external.fresh', $apiBlogs, now()->addMinutes(5));
+                    Cache::put('blogs.external.last-success', $apiBlogs, now()->addDays(7));
+                } catch (\Exception $e) {
+                    $apiBlogs = Cache::get('blogs.external.last-success', []);
+                }
+            }
 
-            if ($response->successful()) {
-                $data = $response->json();
-                $apiBlogs = $data['blogs'] ?? [];
-                
+            if (is_array($apiBlogs)) {
                 foreach ($apiBlogs as $blog) {
                     $slug = Str::slug($blog['title'] ?? '');
                     if ($slug && !isset($slugsSeen[$slug])) {
@@ -282,6 +294,15 @@ class BlogController extends Controller
         } catch (\Exception $e) {
             // Silently fall back to already collected articles
         }
+
+        // Replace the original generic treatment photo on the implant guide.
+        foreach ($articles as &$article) {
+            if ($article['slug'] === 'why-dental-implants-are-the-best-solution'
+                && str_contains($article['image'] ?? '', 'photo-1606811971618-4486d14f3f99')) {
+                $article['image'] = asset('images/treatments/implants-vs-dentures.png');
+            }
+        }
+        unset($article);
 
         return $articles;
     }

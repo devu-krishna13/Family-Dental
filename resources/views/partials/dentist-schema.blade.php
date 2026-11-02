@@ -19,7 +19,7 @@
             'latitude' => config('clinic.latitude'),
             'longitude' => config('clinic.longitude'),
         ],
-        'hasMap' => 'https://www.google.com/maps/search/?api=1&query=' . config('clinic.latitude') . ',' . config('clinic.longitude'),
+        'hasMap' => config('clinic.google_maps_url'),
         'openingHoursSpecification' => [[
             '@type' => 'OpeningHoursSpecification',
             'dayOfWeek' => array_map(fn ($day) => 'https://schema.org/' . $day, ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']),

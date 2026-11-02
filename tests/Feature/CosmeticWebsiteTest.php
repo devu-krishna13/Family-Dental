@@ -101,15 +101,15 @@ class CosmeticWebsiteTest extends TestCase
             $this->assertCount(1, $clinics);
             $clinic = $clinics[0];
             $this->assertSame('https://familydentalcare.in/#clinic', $clinic['@id']);
-            $this->assertSame(9.1202, $clinic['geo']['latitude']);
-            $this->assertSame(76.5637, $clinic['geo']['longitude']);
+            $this->assertSame(9.1210367, $clinic['geo']['latitude']);
+            $this->assertSame(76.5629389, $clinic['geo']['longitude']);
             $this->assertSame('+917012761098', $clinic['telephone']);
             $this->assertSame('Kanjippuzha Pallimukk, Changankulangara Kambisseri Road', $clinic['address']['streetAddress']);
             $this->assertSame('09:00', $clinic['openingHoursSpecification'][0]['opens']);
             $this->assertSame('18:30', $clinic['openingHoursSpecification'][0]['closes']);
             $this->assertCount(6, $clinic['openingHoursSpecification'][0]['dayOfWeek']);
             $this->assertSame(['Orthodontics', 'Prosthodontics', 'Cosmetic Dentistry'], array_column($clinic['medicalSpecialty'], 'name'));
-            if ($path !== '/blog') $response->assertSee('destination=9.1202,76.5637', false)->assertSee('maps?q=9.1202,76.5637', false);
+            if ($path !== '/blog') $response->assertSee('destination=9.1210367,76.5629389', false)->assertSee('maps?q=9.1210367,76.5629389', false);
         }
     }
 }

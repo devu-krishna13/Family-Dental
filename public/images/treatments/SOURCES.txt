@@ -19,3 +19,5 @@ Active card replacements (2026-11-01):
 smile-corrections.png: AI-generated portrait using user-provided reference; illustrative, not a clinic patient result.
 veneers.png: User-provided dental veneers image.
 
+
+implants-vs-dentures.png: User-provided comparison image, supplied 2026-11-02.

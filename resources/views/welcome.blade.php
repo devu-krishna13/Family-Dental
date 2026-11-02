@@ -84,7 +84,7 @@
                     </span>
                     <h3 class="malayalam-snippet-title">ഫാമിലി ഡെന്റൽ ക്ലിനിക്ക്, കാഞ്ഞിപ്പുഴ പള്ളിമുക്ക്</h3>
                     <p class="malayalam-snippet-text">
-                        വള്ളിക്കുന്നം, കമ്പിശ്ശേരി, കായംകുളം ഭാഗത്തുള്ളവർക്ക് മികച്ച ഡെന്റൽ ചികിത്സ. അടിയന്തിര പല്ലുവേദനയ്ക്കും ഇംപ്ലാന്റ്, കമ്പിയിടാത്ത ഇൻവിസിബിൾ അലൈനർ ചികിത്സകൾക്കും ഡോ. ഫർഹാനയുടെ നേരിട്ടുള്ള പരിശോധന.
+                        വള്ളികുന്നം, കാമ്പിശ്ശേരി, ഓച്ചിറ, കരുനാഗപ്പള്ളി, ചൂനാട്, കറ്റാനം, കായംകുളം ഭാഗത്തുള്ളവർക്ക് മികച്ച ഡെന്റൽ ചികിത്സ. അടിയന്തിര പല്ലുവേദനയ്ക്കും ഇംപ്ലാന്റ്, കമ്പിയിടാത്ത ഇൻവിസിബിൾ അലൈനർ ചികിത്സകൾക്കും ഡോ. ഫർഹാനയുടെ നേരിട്ടുള്ള പരിശോധന.
                     </p>
                     <div class="malayalam-snippet-timing">
                         <span><i class="far fa-clock"></i> തിങ്കൾ - ശനി: 9:00 AM - 6:30 PM</span>
@@ -148,15 +148,7 @@
             </div>
         </section>
 
-        <section id="testimonials" class="bg-alt">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Patient Experiences</h2>
-                    <p>Read patient feedback on Google and speak with our team about what to expect from your treatment.</p>
-                    <a class="btn btn-outline" href="https://maps.google.com/?cid=1155437812921048890" target="_blank" rel="noopener noreferrer">Read Google Reviews</a>
-                </div>
-            </div>
-        </section>
+        @include('partials.google-reviews')
         <!-- Blog Section -->
         <section class="home-blog-section">
             <div class="container">
@@ -242,7 +234,7 @@
                             Have you visited Dr. Farhana recently? Take 30 seconds to support FamilyDentalCare with a Google Review. It helps local families find gentle, trustworthy dental care.
                         </p>
                     </div>
-                    <a href="https://maps.google.com/?cid=1155437812921048890" target="_blank" class="btn-google-review">
+                    <a href="{{ config('clinic.google_maps_url') }}" target="_blank" class="btn-google-review">
                         <i class="fab fa-google"></i> Leave a Google Review
                     </a>
                 </div>

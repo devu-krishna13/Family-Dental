@@ -168,7 +168,7 @@ class BlogSeeder extends Seeder
                 ',
                 'read_time' => '5 min read',
                 'date' => 'October 08, 2026',
-                'image' => 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=600&auto=format&fit=crop'
+                'image' => asset('images/treatments/implants-vs-dentures.png')
             ]
         ];
 

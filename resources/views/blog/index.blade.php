@@ -22,8 +22,8 @@
         <section style="padding: 1.5rem 0 1rem;">
             <div class="container">
                 <div class="section-header" style="text-align: center; margin-bottom: 3.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    <h1 style="font-family: 'Playfair Display', Georgia, serif; font-size: 3.5rem; font-weight: 800; color: var(--text-dark); margin-bottom: 1rem; letter-spacing: -1px;">Blogs</h1>
-                    <p style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.25rem; line-height: 1.6; color: var(--text-muted); max-width: 650px; margin: 0 auto; font-style: italic; font-weight: 400;">
+                    <h1 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 3.5rem; font-weight: 800; color: var(--text-dark); margin-bottom: 1rem; letter-spacing: -1px;">Blogs</h1>
+                    <p style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.25rem; line-height: 1.6; color: var(--text-muted); max-width: 650px; margin: 0 auto; font-style: italic; font-weight: 400;">
                         Our personal blog focused on keeping your smile healthy and beautiful, sharing helpful guides and insights.
                     </p>
                 </div>
