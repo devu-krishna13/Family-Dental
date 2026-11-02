@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
+use Illuminate\Pagination\LengthAwarePaginator;
 use App\Models\Blog;
 
 class BlogController extends Controller
@@ -175,7 +177,7 @@ class BlogController extends Controller
                 'date' => 'October 08, 2026',
                 'created_at' => '2026-10-08 10:00:00',
                 'updated_at' => '2026-10-08 10:00:00',
-                'image' => 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=600&auto=format&fit=crop'
+                'image' => asset('images/treatments/implants-vs-dentures.png')
             ]
         ];
     }
@@ -187,11 +189,13 @@ class BlogController extends Controller
     {
         $articles = [];
         $slugsSeen = [];
+        $databaseAvailable = false;
 
         // 1. Try fetching from local database model if available
         try {
             if (class_exists(Blog::class)) {
                 $dbBlogs = Blog::orderBy('created_at', 'desc')->get();
+                $databaseAvailable = true;
                 if ($dbBlogs->isNotEmpty()) {
                     foreach ($dbBlogs as $b) {
                         $item = [
@@ -216,9 +220,10 @@ class BlogController extends Controller
             // DB connection or migration not ready yet
         }
 
-        // 2. Ensure the Action Plan's primary local guides are always present
-        foreach (self::getDefaultArticles() as $defaultArticle) {
-            if (!isset($slugsSeen[$defaultArticle['slug']])) {
+        // Use sample guides only before the database is available. Once it is
+        // ready, respect admin edits and deletions, including an empty blog table.
+        if (!$databaseAvailable) {
+            foreach (self::getDefaultArticles() as $defaultArticle) {
                 $articles[] = $defaultArticle;
                 $slugsSeen[$defaultArticle['slug']] = true;
             }
@@ -226,15 +231,26 @@ class BlogController extends Controller
 
         // 3. Try to fetch additional external blogs if API is responsive
         try {
-            $response = Http::withHeaders([
-                'Accept' => 'application/json',
-                'X-API-KEY' => 'pk_JROGfCHoFRcJFlGZ68Ff7BPSxdVSyqvJ'
-            ])->timeout(3)->get('https://blogs.task19.com/api/v1/projects/blogs');
+            $apiBlogs = Cache::get('blogs.external.fresh');
+            if ($apiBlogs === null) {
+                try {
+                    $response = Http::withHeaders([
+                        'Accept' => 'application/json',
+                        'X-API-KEY' => 'pk_JROGfCHoFRcJFlGZ68Ff7BPSxdVSyqvJ',
+                    ])->timeout(3)->get('https://blogs.task19.com/api/v1/projects/blogs');
+                    $response->throw();
+                    $apiBlogs = $response->json('blogs');
+                    if (!is_array($apiBlogs)) {
+                        throw new \UnexpectedValueException('Invalid external blog response');
+                    }
+                    Cache::put('blogs.external.fresh', $apiBlogs, now()->addMinutes(5));
+                    Cache::put('blogs.external.last-success', $apiBlogs, now()->addDays(7));
+                } catch (\Exception $e) {
+                    $apiBlogs = Cache::get('blogs.external.last-success', []);
+                }
+            }
 
-            if ($response->successful()) {
-                $data = $response->json();
-                $apiBlogs = $data['blogs'] ?? [];
-                
+            if (is_array($apiBlogs)) {
                 foreach ($apiBlogs as $blog) {
                     $slug = Str::slug($blog['title'] ?? '');
                     if ($slug && !isset($slugsSeen[$slug])) {
@@ -279,6 +295,15 @@ class BlogController extends Controller
             // Silently fall back to already collected articles
         }
 
+        // Replace the original generic treatment photo on the implant guide.
+        foreach ($articles as &$article) {
+            if ($article['slug'] === 'why-dental-implants-are-the-best-solution'
+                && str_contains($article['image'] ?? '', 'photo-1606811971618-4486d14f3f99')) {
+                $article['image'] = asset('images/treatments/implants-vs-dentures.png');
+            }
+        }
+        unset($article);
+
         return $articles;
     }
 
@@ -296,6 +321,16 @@ class BlogController extends Controller
                 return strtolower($blog['category'] ?? '') === strtolower($selectedCategory);
             }));
         }
+
+        $page = max(1, (int) $request->query('page', 1));
+        $perPage = 6;
+        $articles = new LengthAwarePaginator(
+            array_slice($articles, ($page - 1) * $perPage, $perPage),
+            count($articles),
+            $perPage,
+            $page,
+            ['path' => $request->url(), 'query' => $request->except('page')]
+        );
 
         return view('blog.index', compact('articles', 'categories', 'selectedCategory'));
     }

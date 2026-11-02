@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin Login | Family Dental Clinic</title>
+    <title>Admin Login | FamilyDentalCare</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -107,7 +107,7 @@
                 </button>
             </form>
             <div style="text-align: center; margin-top: 2rem;">
-                <a href="/" style="color: var(--primary); text-decoration: none; font-weight: 700; font-size: 0.95rem;">
+                <a href="{{ url('/') }}" style="color: var(--primary); text-decoration: none; font-weight: 700; font-size: 0.95rem;">
                     <i class="fas fa-arrow-left"></i> Return to Homepage
                 </a>
             </div>
