@@ -318,6 +318,7 @@
 
 
     <script src="{{ asset('js/site-navigation.js') }}?v={{ filemtime(public_path('js/site-navigation.js')) }}" defer></script>
+    <script src="{{ asset('js/review-carousel.js') }}?v={{ filemtime(public_path('js/review-carousel.js')) }}" defer></script>
 </body>
 
 </html>

@@ -1,11 +1,17 @@
 <section id="testimonials" class="google-reviews-section" aria-labelledby="google-reviews-title">
     <div class="container">
         <div class="section-header">
-            <h2 id="google-reviews-title">Our Patients Wall of Love</h2>
-            <p>Patient experiences shared on Google.</p>
-            <a class="btn btn-outline" href="{{ config('clinic.google_maps_url') }}" target="_blank" rel="noopener noreferrer">View all reviews on Google</a>
+            <h2 id="google-reviews-title">Our Patients' Wall of Love</h2>
+            <p>Genuine patient experiences and testimonials collected from Google Reviews.</p>
         </div>
-        <div class="google-review-links google-review-cards">
+        <div class="review-carousel" data-review-carousel role="region" aria-roledescription="carousel" aria-label="Patient reviews">
+        <div class="review-carousel-controls">
+            <button class="review-carousel-control" type="button" data-review-prev aria-label="Previous reviews" aria-controls="review-carousel-viewport"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+            <button class="review-carousel-pause" type="button" data-review-pause aria-pressed="false">Pause scrolling</button>
+            <button class="review-carousel-control" type="button" data-review-next aria-label="Next reviews" aria-controls="review-carousel-viewport"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+        <div class="review-carousel-viewport" id="review-carousel-viewport" tabindex="0" aria-label="Reviews. Use left and right arrow keys to browse.">
+        <div class="google-review-links google-review-cards review-carousel-track">
             @foreach([
                 ['name' => 'Shafni Shafeeck', 'initials' => 'S', 'text' => 'Super friendly and professional staff and doctor! Had the best first time experience.'],
                 ['name' => 'Sahila Aseem', 'initials' => 'SA', 'text' => 'Good hospitality💗'],
@@ -34,6 +40,7 @@
                     <span class="google-review-avatar" aria-hidden="true">{{ $review['initials'] }}</span>
                 </article>
             @endforeach
-        </div>
+        </div></div></div>
+        <div class="review-carousel-footer"><a class="btn btn-outline" href="{{ config('clinic.google_reviews_url') }}" target="_blank" rel="noopener noreferrer">View All Reviews on Google <i class="fas fa-external-link-alt" aria-hidden="true"></i></a></div>
     </div>
 </section>

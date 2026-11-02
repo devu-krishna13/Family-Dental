@@ -2885,3 +2885,18 @@ footer {
 .google-review-card .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 .google-review-stars .google-review-star-empty { color: #e5e7eb; }
 .google-review-rating-only { flex: 1; margin: 0 0 1rem; color: #6b7280; font-size: .95rem; }
+/* One-row patient review carousel. */
+.review-carousel-viewport { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: #cbd5e1 transparent; border-radius: 16px; padding: 12px 4px 20px; }
+.review-carousel-viewport:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+.google-review-cards.review-carousel-track { display: flex; flex-wrap: nowrap; justify-content: flex-start; gap: 24px; width: max-content; }
+.review-carousel-track .google-review-card { flex: 0 0 auto; width: 350px; }
+.review-carousel-controls { display: flex; justify-content: flex-end; align-items: center; gap: 12px; margin-bottom: 8px; }
+.review-carousel-control { width: 44px; height: 44px; border: 1px solid var(--border); border-radius: 50%; background: white; color: var(--primary); cursor: pointer; }
+.review-carousel-pause { background: white; border: 1px solid var(--border); border-radius: 999px; padding: 10px 16px; color: var(--text-main); cursor: pointer; }
+.review-carousel-control:hover, .review-carousel-pause:hover { background: var(--primary-light); }
+.review-carousel-controls button:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+.review-carousel-footer { text-align: center; margin-top: 28px; }
+.review-carousel-controls { visibility: hidden; }
+.review-carousel.is-ready .review-carousel-controls { visibility: visible; }
+@media (max-width: 767px) { .review-carousel-track .google-review-card { width: 310px; } }
+@media (max-width: 480px) { .review-carousel-track .google-review-card { width: min(290px, calc(100vw - 80px)); padding: 1.5rem 1rem; } }
