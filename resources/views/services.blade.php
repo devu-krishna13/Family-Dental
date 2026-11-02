@@ -118,7 +118,7 @@
                     <p>Conveniently accessible from Vallikunnam, Kambisseri, and Kayamkulam</p>
                 </div>
                 <div class="map-container">
-                    <iframe title="FamilyDentalCare clinic location" src="https://maps.google.com/maps?q={{ config('clinic.latitude') }},{{ config('clinic.longitude') }}&amp;z=15&amp;output=embed"
+                    <iframe title="FamilyDentalCare clinic location" src="{{ config('clinic.google_maps_embed_url') }}"
                         width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
             </div>

@@ -109,7 +109,7 @@ class CosmeticWebsiteTest extends TestCase
             $this->assertSame('18:30', $clinic['openingHoursSpecification'][0]['closes']);
             $this->assertCount(6, $clinic['openingHoursSpecification'][0]['dayOfWeek']);
             $this->assertSame(['Orthodontics', 'Prosthodontics', 'Cosmetic Dentistry'], array_column($clinic['medicalSpecialty'], 'name'));
-            if ($path !== '/blog') $response->assertSee('destination=9.1210367,76.5629389', false)->assertSee('maps?q=9.1210367,76.5629389', false);
+            if ($path !== '/blog') $response->assertSee('destination=9.1210367,76.5629389', false)->assertSee(config('clinic.google_maps_embed_url'), false);
         }
     }
 }
